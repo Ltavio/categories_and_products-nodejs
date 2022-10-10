@@ -1,6 +1,6 @@
 import database from "../database";
 
-const uploadCategoryService = async (id, name) => {
+const updateCategoryService = async (id, name) => {
   try {
     const res = await database.query(
       "UPDATE categories SET name = $1 WHERE id = $2 RETURNING *",
@@ -17,4 +17,4 @@ const uploadCategoryService = async (id, name) => {
   }
 };
 
-export default uploadCategoryService;
+export default updateCategoryService;

@@ -8,7 +8,7 @@ const updateProductService = async (id, name, price, category_id) => {
     );
 
     if (res.rows.length === 0) {
-      throw "User not found";
+      throw "Product not found";
     }
 
     return { message: "Product update", Product: res.rows[0] };

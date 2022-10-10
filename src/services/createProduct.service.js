@@ -8,7 +8,7 @@ const createProductService = async (name, price, category_id) => {
       [name, price, category_id, uuidv4()]
     );
 
-    return { message: "Product create", category: res.rows[0] };
+    return { message: "Product create", Product: res.rows[0] };
   } catch (error) {
     throw new Error(error);
   }

@@ -8,7 +8,7 @@ const updateCategoryService = async (id, name) => {
     );
 
     if (res.rows.length === 0) {
-      throw "User not found";
+      throw "Category not found";
     }
 
     return { message: "Category update", Category: res.rows[0] };

@@ -8,7 +8,7 @@ const deleteCategoryService = async (id) => {
     );
 
     if (res.rows.length === 0) {
-      throw "User not found";
+      throw "Category not found";
     }
 
     return res.rows[0];

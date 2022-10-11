@@ -11,7 +11,7 @@ const listProductCategoryService = async (category_id) => {
       throw "Product not found";
     }
 
-    return res.rows[0];
+    return res.rows;
   } catch (error) {
     throw new Error(error);
   }
